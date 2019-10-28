@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DustBoxTopSite</title>
+<style>
+	input[type="submit"]{
+		width:150px;
+		height:40px;
+		background-color:#36a9e3;
+		font-size:25px;
+	}
+	.Level{
+	display:flex;
+	justify-content:center;
+	}
+</style>
+</head>
+<body>
+
+<div class="top" align="center">
+<img src="animation/top.png" alt="写真" width="600px" height="300px"><br>
+<font size="6">Levelを選択してスタート!!</font>
+
+<div class="Level">  <!--Main.jspにLevel●の値を渡したい  -->
+<form action="Game/Main.java" method="get">
+<input type="radio" name="level" value="1">Level_1<br>
+<input type="radio" name="level" value="2">Level_2<br>
+<input type="radio" name="level" value="3">Level_3<br>
+<input type="submit" value="START"></form>
+</div>
+
+</div>
+</body>
+</html>
