@@ -2,6 +2,24 @@ package Game;
 
 public class Logic {
 
+	private String heightA;
+	private String powerB;
+
+	public String getHeightA() {
+		return heightA;
+	}
+	public String getPowerB() {
+		return powerB;
+	}
+
+	public void setHeightA(String heightA) {
+		this.heightA = heightA;
+	}
+	public void setPowerB(String powerB) {
+		this.powerB = powerB;
+	}
+
+	public Logic() {
 
 		//Level 1 廃墟    右下GoaL
 		//Level 2 路地裏  右寄り中心寄りGoaL

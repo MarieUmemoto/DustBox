@@ -2,6 +2,7 @@ package Game;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,7 +34,30 @@ public class Main extends HttpServlet {
 
 		//フォワード
 		String Level = request.getParameter("level");
+		//ビーンズをインスタンス化
+		Beans Beans = new Beans();
+		//Levelを保存
+		Beans.setLevel(Level);
+        System.out.println(Beans.getLevel());
+        request.setAttribute("level",Beans);
 
+		//ゲーム画面へ
+		RequestDispatcher D = request.getRequestDispatcher("DustBox.jsp");
+		D.forward(request, response);
+
+		//Gage.jsからAとBの値をとってビーンズに保存
+		String A = request.getParameter("heightA");
+		Beans.setA(A);
+		String B = request.getParameter("powerB");
+		Beans.setB(B);
+
+		//Logicへ
+		RequestDispatcher DisLogic = request.getRequestDispatcher("Logic.java");
+
+
+
+		//Logic LG = new Logic();
+		//LG.execute(LG.getA);
 
 
 
